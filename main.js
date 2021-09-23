@@ -1,16 +1,16 @@
-var file = new XMLHttpRequest()
-var text = []
-file.open("GET", OnionArircles.txt, false);
-file.onreadystatechange = function(){
-   if(rawFile.readyState === 4){
-            if(rawFile.status === 200 || rawFile.status == 0){
-                var allText = rawFile.responseText;
-                alert(allText);
-                text = allText.split("\n");
-            }
-    }
-    rawFile.send(null);
-}
+// var file = new XMLHttpRequest()
+// var text = []
+// file.open("GET", OnionArircles.txt, false);
+// file.onreadystatechange = function(){
+//    if(rawFile.readyState === 4){
+//             if(rawFile.status === 200 || rawFile.status == 0){
+//                 var allText = rawFile.responseText;
+//                 alert(allText);
+//                 text = allText.split("\n");
+//             }
+//     }
+//     rawFile.send(null);
+// }
 
 var filec= new XMLHttpRequest()
 var text = []
