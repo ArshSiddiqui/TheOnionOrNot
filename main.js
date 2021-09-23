@@ -15,5 +15,10 @@ file.onreadystatechange = function(){
     rawFile.send(null);
 }
 
+var filec= new XMLHttpRequest()
+var text = []
+filecopen("GET", OnionOrNot.csv, false);
+var data = $.csv.toObjects(filec)
+
 var randNum = Math.floor(Math.random() * 1000);
-document.getElementById("artitle").innerHTML = text[randNum]
+document.getElementById("artitle").innerHTML = data[randNum]
