@@ -16,6 +16,6 @@ var filec= new XMLHttpRequest()
 var text = []
 filecopen("GET", OnionOrNot.csv, false);
 var data = $.csv.toObjects(filec)
-
+console.log(data)
 var randNum = Math.floor(Math.random() * 1000);
 document.getElementById("artitle").innerHTML = data[randNum]
