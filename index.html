@@ -5,9 +5,10 @@
     <style>
       #title{
         font-family: "Georgia", Times, Serif;
-        text-align: center
+        text-align: center;
       }
     </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   </head>
   
   <body>
@@ -16,6 +17,8 @@
   <a href="" id="artitle">ARTICLE TITLE</a>
   <button id="btnreal">Real</button>
   <button id="btnonion">Onion</button>
-  <script src="main.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  var url = "main.js";
+  $.getScript(url);
+  </script>
 </html>
