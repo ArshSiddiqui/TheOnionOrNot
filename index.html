@@ -6,6 +6,47 @@
       #title{
         font-family: "Georgia", Times, Serif;
         text-align: center;
+        font-size: 20px;
+      }
+      .RealWorld{
+        text-align: center;
+        height: 24px;
+        padding-top:20px
+      }
+      #btnreal{
+        border: none;
+        display: inline-block;
+        background-color: #FFFFFF;
+        font-size: 18px;
+      }
+      #btnreal:hover{
+        border: none;
+        display: inline-block;
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+      #btnonion{
+	border: none;
+        display: inline-block;
+        background-color: #FFFFFF;
+        color: #60B540;
+        font-size: 18px;
+      }
+      #btnonion:hover{
+        border: none;
+        display: inline-block;
+        background-color: #0C4F23;
+        color: #B0DBBE;
+      }
+      .TheOnion{
+        text-align: center;
+        height: 20px;
+        padding-top:20px
+      }
+      #artitle{
+	text-align: center;
+	height: 20px;
+        padding-top:20px;
       }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
@@ -15,8 +56,12 @@
     <p id="title">Is it the Onion or Real News?<p>
   </body>
   <a href="" id="artitle">ARTICLE TITLE</a>
-  <button id="btnreal">Real</button>
-  <button id="btnonion">Onion</button>
+  <div class="RealWorld"> 
+    <button id="btnreal">Real</button>
+  </div>
+  <div class="TheOnion"> 
+    <button id="btnonion">Onion</button>
+  </div>
   <script>
   var url = "main.js";
   $.getScript(url);
