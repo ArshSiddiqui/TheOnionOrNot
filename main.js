@@ -1,6 +1,6 @@
 //var file = new XMLHttpRequest()
 //var text = []
-//file.open("GET", "http://OnionAricles.txt", false);
+//file.open("GET", "http://OnionArticles.csv", false);
 //console.log("here")
 //file.onreadystatechange = function(){
 //   if(rawFile.readyState === 4){
@@ -24,3 +24,5 @@
 //document.getElementById("artitle").innerHTML = text[randNum]
 
 console.log("woow")
+
+var data = $.csv.toObjects(OnionArticles.csv)
