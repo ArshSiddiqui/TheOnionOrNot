@@ -3,6 +3,9 @@
   <head>
     <title>Is it the Onion or Real News? I mean we pretty much live in the satire timeline as it is, so why not?</title>
     <style>
+      body{
+	background-color: #FFFFFF;
+      }
       #title{
         font-family: "Georgia", Times, Serif;
         text-align: center;
@@ -15,14 +18,15 @@
       }
       .RealWorld{
         text-align: center;
-        height: 24px;
-        padding-top:20px
+        height: 20px;
+        padding-top:50px
       }
       #btnreal{
         border: none;
         display: inline-block;
         background-color: #FFFFFF;
         font-size: 18px;
+	padding: 15px 32px;
       }
       #btnreal:hover{
         border: none;
@@ -33,42 +37,50 @@
       .TheOnion{
         text-align: center;
         height: 20px;
-        padding-top:20px
+        padding-top:50px
       }
       #btnonion{
 	border: none;
         display: inline-block;
         background-color: #FFFFFF;
-        color: #60B540;
+        color: #006B3A;
         font-size: 18px;
+	padding: 15px 32px;
       }
       #btnonion:hover{
         border: none;
         display: inline-block;
-        background-color: #0C4F23;
-        color: #B0DBBE;
+        background-color: #006B3A;
+        color: #FFFFFF;
       }
       #artitle{
+	ont-family: "Georgia", Times, Serif;
+	font-size: 18px;
 	text-align: center;
 	height: 20px;
-        padding-top:20px;
+        padding-top: 50px;
+      }
+      #TheOnion:hover{
+	background-color: #FFFFFF;
       }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-Below font from Dan's Tools: https://www.cssfontstack.com/Playfair-Display__>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
   </head>
   
   <body>
     <p id="title">Is it the Onion or Real News?</p>
     <p id="comment">I mean, we pretty much live in the satire timeline as it is</p>
   </body>
-  <a href="" id="artitle">ARTICLE TITLE</a>
+  <p id="artitle">Article Title</p>
   <div class="RealWorld"> 
     <button id="btnreal">Real</button>
   </div>
   <div class="TheOnion"> 
     <button id="btnonion">Onion</button>
   </div>
-  <script>
+  <script type="text/javascript">
   var url = "main.js";
   $.getScript(url);
   </script>
