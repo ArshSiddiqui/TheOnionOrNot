@@ -1,28 +1,58 @@
-//var file = new XMLHttpRequest()
-//var text = []
-//file.open("GET", "http://OnionArticles.csv", false);
-//console.log("here")
-//file.onreadystatechange = function(){
-//   if(rawFile.readyState === 4){
-//            if(rawFile.status === 200 || rawFile.status == 0){
-//                var allText = rawFile.responseText;
-//                alert(allText);
-//                text = allText.split("\n");
-//            }
-//    }
-//    rawFile.send(null);
-//}
-//console.log(text)
-//var filec= new XMLHttpRequest()
-//var text = []
-//filec.open("GET", "OnionOrNot.csv", false);
-//var data = $.csv.toObjects(filec)
-//console.log(data)
-//var randNum = Math.floor(Math.random() * 1000);
-//document.getElementById("artitle").innerHTML = data[randNum]
-//var randNum = Math.floor(Math.random() * 1000);
-//document.getElementById("artitle").innerHTML = text[randNum]
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
 
-console.log("woow")
+var data;
+var current_index = 0;
+var isOnion;
 
-var data = $.csv.toObjects(OnionArticles.csv)
+function load_question() {
+    let question = data[current_index];
+    $("#artitle").text(question["Title"]);
+    isOnion = question["Onion"];
+    current_index = (current_index + 1) % data.length;
+}
+
+$(document).ready(function() {
+    // Disable buttons first
+    // We enable the buttons once the titles are ready.
+    $("#btnreal").prop("disabled", true);
+    $("#btnonion").prop("disabled", true);
+
+    $.ajax({
+        url: "articles.json",
+        dataType: "json",
+    }).done(function(resp, status) {
+        data = resp;
+        shuffleArray(data);
+        load_question();
+
+        // Enable the buttons
+        $("#btnreal").prop("disabled", false);
+        $("#btnonion").prop("disabled", false);
+    });
+
+    // Setup the buttons
+    $("#btnreal").click(function() {
+        if (isOnion) {
+            alert("Wrong!");
+        } else {
+            alert("Correct!");
+        }
+        load_question();
+    });
+    $("#btnonion").click(function() {
+        if (isOnion) {
+            alert("Correct!");
+        } else {
+            alert("Wrong!");
+        }
+        load_question();
+    });
+});
