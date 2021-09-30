@@ -1,150 +1,133 @@
 <!DOCTYPE html>
 <html>
-  	<head>
-		<title>Is it the Onion or Real News? I mean we pretty much live in the satire timeline as it is, so why not?</title>
-		<style>
-			* {
-				vertical-align: baseline;
-				font-weight: inherit;
-				font-family: inherit;
-				font-style: inherit;
-				font-size: 100%;
-				border: 0 none;
-				outline: 0;
-				padding: 0;
-				margin: 0;
-			}
+  <head>
+    <title>
+      Is it the Onion or Real News? I mean we pretty much live in the satire
+      timeline as it is, so why not?
+    </title>
+    <style>
+      * {
+        vertical-align: baseline;
+        font-weight: inherit;
+        font-family: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        border: 0 none;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+      }
 
-			body{
-				background-color: #FFFFFF;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-			body > * + * {
-				margin-top: 1rem;
-			}
-			
-			#title{
-				font-family: "Georgia", Times, Serif;
-				font-size: 2rem;
-				margin-top: 1rem;
-			}
-			#comment{
-				font-family: "Georgia", Times, Serif;
-				font-size: 14px;
-			}
-			.RealWorld{
-				height: 20px;
-			}
+      body {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      body > * + * {
+        margin-top: 1rem;
+      }
 
-			#btnreal{
-				margin-top: 2rem;
-				border: none;
-				background-color: #FFFFFF;
-				cursor: pointer;
-			}
-			a{
-				padding: 1rem 2rem;
-				display: block;	
-				font-size: 1.25rem;
-				border: 2px solid #333;
-				color: #000000;
-				text-decoration: none;
-				position: relative;	
-				transition: all .35s;
-				min-width: 3rem;
-			}	
-			a span{					
-				position: relative;
-				z-index: 2;
-			}
-			a:after{
-				position: absolute;
-				content: "";
-				top: 0;
-				left: 0;
-				width: 0;
-				height: 100%;
-				background-color: #000000;
-				transition: all .35s;
-			}
-			a:hover{
-				color: #FFFFFF;
-			}
-			a:hover:after{
-				width: 100%
-			}
-			
-      			.TheOnion{
-        			height: 20px;
-					color: #006B3A;
-      			}
-      			#btnonion{
-					border: none;
-					margin-top: 4rem;
-        			background-color: #FFFFFF;
-        			color: #006B3A;
-					cursor: pointer;
-      			}
-				c{
-					padding: 1rem 2rem;
-					display: block;
-					border: 2px solid #006B3A;
-					color: #006B3A;
-					text-decoration: none;
-					position: relative;	
-					transition: all .35s;		
-				}	
-				c span{					
-					position: relative;
-					z-index: 2;
-				}
-				c:after{
-					position: absolute;
-					content: "";
-					top: 0;
-					left: 0;
-					right: 0;
-					width: 0;
-					height: 100%;
-					background-color: #006B3A;
-					transition: all .35s;
-				}
-				c:hover{
-					color: #FFFFFF;
-				}
-				c:hover:after{
-					width: 100%;
-				}
-				
-      			#artitle{
-				font-family: "Georgia", Times, Serif;
-				margin-top: 2rem;
-				font-size: 18px;
-				height: 20px;
-      			}
-     			#TheOnion:hover{
-				background-color: #FFFFFF;
-      			}
-    		</style>
-    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-	</head>
-  
-  	<body>
-    		<p id="title">Is it the Onion or Real News?</p>
-    		<p id="comment">I mean, we pretty much live in the satire timeline as it is</p>
+      #title {
+        font-family: "Georgia", Times, Serif;
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+      #comment {
+        font-family: "Georgia", Times, Serif;
+        font-size: 14px;
+      }
+      .RealWorld {
+        height: 20px;
+      }
 
-  		<p id="artitle">Article Title</p>
-  		<div class="RealWorld"> 
-    			<button id="btnreal"><a href="#"><span>Real</span></a></button>
-  		</div>
-  		<div class="TheOnion"> 
-    			<button id="btnonion"><a href="#"><span>Onion</span></a></button>
-  		</div>
-	</body>
-  		<script type="text/javascript">
-  			var url = "main.js";
-  			$.getScript(url);
-  		</script>
+      #btnreal {
+        margin-top: 2rem;
+        border: none;
+        background-color: #ffffff;
+        cursor: pointer;
+      }
+      span {
+        padding: 1rem 2rem;
+        display: block;
+        font-size: 1.25rem;
+        border: 2px solid #333;
+        color: #000000;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.35s;
+        min-width: 3rem;
+      }
+      span {
+        position: relative;
+        z-index: 2;
+      }
+      span:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #000000;
+        transition: all 0.35s;
+      }
+      span:hover {
+        color: #ffffff;
+      }
+      span:hover:after {
+        width: 100%;
+      }
+
+      .TheOnion {
+        height: 20px;
+        color: #006b3a;
+      }
+
+      #btnonion {
+        border: none;
+        margin-top: 4rem;
+        background-color: #ffffff;
+        color: #006b3a;
+        cursor: pointer;
+      }
+
+      #artitle {
+        font-family: "Georgia", Times, Serif;
+        margin-top: 2rem;
+        font-size: 18px;
+        height: 20px;
+      }
+      #TheOnion:hover {
+        background-color: #ffffff;
+      }
+    </style>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <p id="title">Is it the Onion or Real News?</p>
+    <p id="comment">
+      I mean, we pretty much live in the satire timeline as it is
+    </p>
+
+    <p id="artitle">Article Title</p>
+    <div class="RealWorld">
+      <button id="btnreal">
+        <span id="spanreal">Real</span>
+      </button>
+    </div>
+    <div class="TheOnion">
+      <button id="btnonion">
+        <span id="spanonion">Onion</span>
+      </button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var url = "main.js";
+    $.getScript(url);
+  </script>
 </html>
