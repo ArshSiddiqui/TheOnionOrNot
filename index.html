@@ -20,20 +20,45 @@
         			text-align: center;
         			height: 20px;
         			padding-top:50px
+				transform: translate(-50%, -50%);
       			}
-      			#btnreal{
-        			border: none;
-        			display: inline-block;
-        			background-color: #FFFFFF;
-        			font-size: 18px;
+				
+			#btnreal{
+				border: none;
+				background-color: #FFFFFF;
+				cursor: pointer;
+			}
+			a{
+				display: block;	
+				font-size: 18px;
+				border: 2px solid #333;
+				color: #333;
+				text-decoration: none;
 				padding: 15px 32px;
-      			}
-      			#btnreal:hover{
-        			border: none;
-        			display: inline-block;
-        			background-color: #000000;
-        			color: #FFFFFF;
-      			}
+				position: relative;	
+				transition: all .35s;		
+			}	
+			a span{					
+				position: relative;
+				z-index: 2;
+			}
+			a:after{
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 100%;
+				background-color: #000000;
+				transition: all .35s;
+			}
+			a:hover{
+				color: #FFFFFF;
+			}
+			a:hover:after{
+				width: 100%
+			}
+			
       			.TheOnion{
         			text-align: center;
         			height: 20px;
@@ -46,11 +71,12 @@
         			color: #006B3A;
        				font-size: 18px;
 				padding: 15px 32px;
+				cursor: pointer;
       			}
       			#btnonion:hover{
         			border: none;
         			display: inline-block;
-        			background-color: #006B3A;
+				background-color: #006B3A;
         			color: #FFFFFF;
       			}
       			#artitle{
@@ -64,7 +90,7 @@
 				background-color: #FFFFFF;
       			}
     		</style>
-    		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 	</head>
   
   	<body>
@@ -73,7 +99,7 @@
   	</body>
   		<p id="artitle">Article Title</p>
   		<div class="RealWorld"> 
-    			<button id="btnreal">Real</button>
+    			<button id="btnreal"><a href="#"><span>Real</span></a></button>
   		</div>
   		<div class="TheOnion"> 
     			<button id="btnonion">Onion</button>
