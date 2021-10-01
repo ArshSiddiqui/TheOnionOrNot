@@ -37,6 +37,13 @@
         font-family: "Georgia", Times, Serif;
         font-size: 14px;
       }
+	  #artitle {
+        font-family: "Georgia", Times, Serif;
+        margin-top: 2rem;
+        font-size: 18px;
+        height: 20px;
+      }
+	  
       .RealWorld {
         height: 20px;
       }
@@ -44,25 +51,47 @@
       #btnreal {
         margin-top: 2rem;
         border: none;
-        background-color: #ffffff;
+        background-color: #FFFFFF;
         cursor: pointer;
       }
-      span {
+	  
+	  .TheOnion {
+        height: 20px;
+        color: #006b3a;
+      }
+
+      #btnonion {
+        border: none;
+        margin-top: 4rem;
+        background-color: #FFFFFF;
+        color: #006b3a;
+        cursor: pointer;
+      }
+	  
+      #TheOnion:hover {
+        background-color: #FFFFFF;
+      }
+	  
+      x, t {
         padding: 1rem 2rem;
         display: block;
         font-size: 1.25rem;
-        border: 2px solid #333;
+        border: 2px solid #000000;
         color: #000000;
         text-decoration: none;
         position: relative;
         transition: all 0.35s;
         min-width: 3rem;
       }
-      span {
+	  t {
+		border: 2px solid #006B3A;
+		color: #006b3a;
+	  }
+      x span, t span {
         position: relative;
         z-index: 2;
       }
-      span:after {
+      x:after, t:after {
         position: absolute;
         content: "";
         top: 0;
@@ -72,35 +101,17 @@
         background-color: #000000;
         transition: all 0.35s;
       }
-      span:hover {
-        color: #ffffff;
+	  t:after{
+		background-color: #006B3A
+	  }
+      x:hover, t:hover{
+        color: #FFFFFF;
       }
-      span:hover:after {
+      x:hover:after, t:hover:after{
         width: 100%;
       }
 
-      .TheOnion {
-        height: 20px;
-        color: #006b3a;
-      }
-
-      #btnonion {
-        border: none;
-        margin-top: 4rem;
-        background-color: #ffffff;
-        color: #006b3a;
-        cursor: pointer;
-      }
-
-      #artitle {
-        font-family: "Georgia", Times, Serif;
-        margin-top: 2rem;
-        font-size: 18px;
-        height: 20px;
-      }
-      #TheOnion:hover {
-        background-color: #ffffff;
-      }
+      
     </style>
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
@@ -117,12 +128,12 @@
     <p id="artitle">Article Title</p>
     <div class="RealWorld">
       <button id="btnreal">
-        <span id="spanreal">Real</span>
+        <x><span id="spanreal">Real</span></x>
       </button>
     </div>
     <div class="TheOnion">
       <button id="btnonion">
-        <span id="spanonion">Onion</span>
+        <t><span id="spanonion">Onion</span></t>
       </button>
     </div>
   </body>
