@@ -11,3 +11,7 @@ This beta version changed the style of the alert box from default by using https
 - Download Node.js and install the sofware on the camputer
 - Open Git Bash and enter this command npm install -g npm
 - Use node -v and npm -v to check if Node.js and npm are installed successfully
+- Swtich to the directory of this project
+- Enter npm install sweetalert --save to install sweetalert
+- Put <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> into the html file
+- use swal() instead of alert()
