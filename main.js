@@ -41,17 +41,17 @@ $(document).ready(function() {
     // Setup the buttons
     $("#btnreal").click(function() {
         if (isOnion) {
-            alert("Wrong!");
+            swal("Wrong!");
         } else {
-            alert("Correct!");
+            swal("Correct!");
         }
         load_question();
     });
     $("#btnonion").click(function() {
         if (isOnion) {
-            alert("Correct!");
+            swal("Correct!");
         } else {
-            alert("Wrong!");
+            swal("Wrong!");
         }
         load_question();
     });
