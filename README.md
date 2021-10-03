@@ -4,7 +4,7 @@ This beta version changed the style of the alert box from default by using https
 
 **Sample Run**
 
-![alt text](https://github.com/ArshSiddiqui/TheOnionOrNot/blob/229a8d44de9390f47cbe65d28638c218fdc648bb/sample%20run.png)
+![alt text](https://github.com/ArshSiddiqui/TheOnionOrNot/blob/27c68bbcf2579a67cee22909a41ba6bd8f2a5c65/sample%20run.png)
 
 **Steps to Use SweetAlert**
 
