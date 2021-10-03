@@ -1,153 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>
-      Is it the Onion or Real News? I mean we pretty much live in the satire
-      timeline as it is, so why not?
-    </title>
-    <style>
-      * {
-        vertical-align: baseline;
-        font-weight: inherit;
-        font-family: inherit;
-        font-style: inherit;
-        font-size: 100%;
-        border: 0 none;
-        outline: 0;
-        padding: 0;
-        margin: 0;
-      }
+<head>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>
+    Is it the Onion or Real News? I mean we pretty much live in the satire
+    timeline as it is, so why not?
+  </title>
+  <style>
+    * {
+      vertical-align: baseline;
+      font-weight: inherit;
+      font-family: inherit;
+      font-style: inherit;
+      font-size: 100%;
+      border: 0 none;
+      outline: 0;
+      padding: 0;
+      margin: 0;
+    }
 
-      body {
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      body > * + * {
-        margin-top: 1rem;
-      }
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    body > * + * {
+      margin-top: 1rem;
+    }
 
-      #title {
-        font-family: "Georgia", Times, Serif;
-        font-size: 2rem;
-        margin-top: 1rem;
-      }
-      #comment {
-        font-family: "Georgia", Times, Serif;
-        font-size: 14px;
-      }
-	  #artitle {
-        font-family: "Georgia", Times, Serif;
-        margin-top: 2rem;
-        font-size: 18px;
-        height: 20px;
-      }
-	  
-      .RealWorld {
-        height: 20px;
-      }
+    #title {
+      font-family: "Georgia", Times, Serif;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    #comment {
+      font-family: "Georgia", Times, Serif;
+      font-size: 14px;
+    }
+    #artitle {
+      font-family: "Georgia", Times, Serif;
+      margin-top: 2rem;
+      font-size: 18px;
+      height: 20px;
+    }
 
-      #btnreal {
-        margin-top: 2rem;
-        border: none;
-        background-color: #FFFFFF;
-        cursor: pointer;
-      }
-	  
-	  .TheOnion {
-        height: 20px;
-        color: #006b3a;
-      }
+    .RealWorld {
+      height: 20px;
+    }
 
-      #btnonion {
-        border: none;
-        margin-top: 4rem;
-        background-color: #FFFFFF;
-        color: #006b3a;
-        cursor: pointer;
-      }
-	  
-      #TheOnion:hover {
-        background-color: #FFFFFF;
-      }
-	  
-      x, t {
-        padding: 1rem 2rem;
-        display: block;
-        font-size: 1.25rem;
-        border: 2px solid #000000;
-        color: #000000;
-        text-decoration: none;
-        position: relative;
-        transition: all 0.35s;
-        min-width: 3rem;
-      }
-	  t {
-		border: 2px solid #006B3A;
-		color: #006b3a;
-	  }
-      x span, t span {
-        position: relative;
-        z-index: 2;
-      }
-      x:after, t:after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: #000000;
-        transition: all 0.35s;
-      }
-	  t:after{
-		background-color: #006B3A
-	  }
-      x:hover, t:hover{
-        color: #FFFFFF;
-      }
-      x:hover:after, t:hover:after{
-        width: 100%;
-      }
+    #btnreal {
+      margin-top: 2rem;
+      border: none;
+      background-color: #FFFFFF;
+      cursor: pointer;
+    }
 
-      /*style of the alert box and the background*/
-      .swal-overlay {
-        background-color: rgba(255,255,255,0);
-      }
+    .TheOnion {
+      height: 20px;
+      color: #006b3a;
+    }
 
-      .swal-modal {
-        border: 2px solid cornflowerblue;
-      }
+    #btnonion {
+      border: none;
+      margin-top: 4rem;
+      background-color: #FFFFFF;
+      color: #006b3a;
+      cursor: pointer;
+    }
 
-    </style>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-      type="text/javascript"
-    ></script>
-  </head>
+    #TheOnion:hover {
+      background-color: #FFFFFF;
+    }
 
-  <body>
-    <p id="title">Is it the Onion or Real News?</p>
-    <p id="comment">
-      I mean, we pretty much live in the satire timeline as it is
-    </p>
+    x, t {
+      padding: 1rem 2rem;
+      display: block;
+      font-size: 1.25rem;
+      border: 2px solid #000000;
+      color: #000000;
+      text-decoration: none;
+      position: relative;
+      transition: all 0.35s;
+      min-width: 3rem;
+    }
+    t {
+      border: 2px solid #006B3A;
+      color: #006b3a;
+    }
+    x span, t span {
+      position: relative;
+      z-index: 2;
+    }
+    x:after, t:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #000000;
+      transition: all 0.35s;
+    }
+    t:after{
+      background-color: #006B3A
+    }
+    x:hover, t:hover{
+      color: #FFFFFF;
+    }
+    x:hover:after, t:hover:after{
+      width: 100%;
+    }
 
-    <p id="artitle">Article Title</p>
-    <div class="RealWorld">
-      <button id="btnreal">
-        <x><span id="spanreal">Real</span></x>
-      </button>
-    </div>
-    <div class="TheOnion">
-      <button id="btnonion">
-        <t><span id="spanonion">Onion</span></t>
-      </button>
-    </div>
-  </body>
-  <script type="text/javascript">
-    var url = "main.js";
-    $.getScript(url);
-  </script>
+    /*style of the alert box and the background*/
+    .swal-overlay {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .swal-modal {
+      border: 2px solid cornflowerblue;
+    }
+
+  </style>
+  <script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+          type="text/javascript"
+  ></script>
+</head>
+
+<body>
+<p id="title">Is it the Onion or Real News?</p>
+<p id="comment">
+  I mean, we pretty much live in the satire timeline as it is
+</p>
+
+<p id="artitle">Article Title</p>
+<div class="RealWorld">
+  <button id="btnreal">
+    <x><span id="spanreal">Real</span></x>
+  </button>
+</div>
+<div class="TheOnion">
+  <button id="btnonion">
+    <t><span id="spanonion">Onion</span></t>
+  </button>
+</div>
+</body>
+<script type="text/javascript">
+  var url = "main.js";
+  $.getScript(url);
+</script>
 </html>
