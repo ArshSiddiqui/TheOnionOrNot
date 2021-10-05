@@ -15,7 +15,7 @@ var isOnion;
 function load_question() {
     let question = data[current_index];
     $("#artitle").text(question["Title"]);
-    isOnion = question["Onion"];
+    isOnion = parseInt(question["Onion"]);
     current_index = (current_index + 1) % data.length;
 }
 
